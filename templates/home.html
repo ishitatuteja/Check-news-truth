@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fake News Detection System</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <section id="main">
+            <marquee scrolldelay="10" direction="right"><h1>FAKE NEWS DETECTION SYSTEM</h1></marquee>
+        </section>
+        <a id="begin" href="#check"><button style="margin-top:3%;" type="button" class="button"><span>Begin</span></button></a>
+        <section id="check">
+            <form action = "http://localhost:5000/home" method = "POST">
+                <h3>Enter your news article: </h3>
+                <!-- <input type="text" name="news"><br> -->
+                <textarea name="news" cols="70" rows="15" placeholder="VIT is opening a new branch in Dubai"></textarea>
+                <br>
+                <input type="submit" value="check" class="button">
+                <!-- <button type="submit" class="button"><span>Check</span></button> -->
+            </form>
+            <p id="result"></p>
+            <div id="mainbar">
+            <div class="bar" id="1"></div>
+            <div class="bar" id="2"></div>
+            <div class="bar" id="3"></div>
+            <div class="bar" id="4"></div>
+            <div class="bar" id="5"></div>
+            <div class="bar" id="6"></div>
+            <div class="bar" id="7"></div>
+            <div class="bar" id="8"></div>
+            <div class="bar" id="9"></div>
+            <div class="bar" id="10"></div>
+            </div>
+        </section>
+        <script type="text/javascript" src="/static/test.js"></script>
+    </body>
+</html>
